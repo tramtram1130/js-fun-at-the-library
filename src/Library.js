@@ -12,8 +12,6 @@ function createLibrary(name) {
 }
 
 function addBook(library, book) {
-  // add book object to a shelf in the library object(created with createdLibrary)
-  // shelf example: denverLibrary.shelves.fantasy
   if (book.genre === 'fantasy') {
     library.shelves.fantasy.push(book)
   } else if (book.genre === 'fiction') {
@@ -24,8 +22,6 @@ function addBook(library, book) {
 }
 
 function checkoutBook(library, title, genre) {
-  // use genre argument to enter the specific shelf where the title argument inspect
-  // remove the book from the shelf if it's available
   if (genre === 'fantasy') {
     for (var i = 0; i < library.shelves.fantasy.length; i++) {
       if (library.shelves.fantasy[i].title === title) {
